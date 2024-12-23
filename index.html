@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+    <script src="script.js" defer></script>
+    <style>
+      li button {
+        border-width: 0;
+        margin: 0 3px;
+        padding: 8px;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #todo-form,
+      details {
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>todolater</h1>
+      <h3>justdoitlater</h3>
+    </header>
+    <main>
+      <h4>add new task</h4>
+      <form id="todo-form">
+        <div>
+          <input
+            type="text"
+            placeholder="write a todo"
+            name="name"
+            required
+            minlength="3"
+          />
+          <textarea
+            name="description"
+            id="description"
+            placeholder="give a description"
+          ></textarea>
+        </div>
+
+        <input type="submit" value="add" />
+      </form>
+      <details open>
+        <summary>todo</summary>
+        <ol id="todo"></ol>
+      </details>
+      <details>
+        <summary>finished</summary>
+        <ol id="finished"></ol>
+      </details>
+    </main>
+  </body>
+</html>
